@@ -1,5 +1,13 @@
 def remove_duplicates(array):
-    return 0
+    if not array:
+        return 0
+    
+    unique_dict = {}
+
+    for num in array:
+        unique_dict[num] = True
+
+    return len(unique_dict)
 
 if __name__ == "__main__":
     print(remove_duplicates([2, 3, 3, 3, 6, 9, 9]))  # 4
