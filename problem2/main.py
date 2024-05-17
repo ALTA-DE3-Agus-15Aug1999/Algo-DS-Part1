@@ -1,5 +1,19 @@
+def bilangan_prima(n):
+    if n < 2 :
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
 def primeX(x):
-    return 0
+    prime_numbers = [2]
+    num = 3
+    while len(prime_numbers) < x:
+        if bilangan_prima(num):
+            prime_numbers.append(num)
+        num += 2
+    return prime_numbers[-1]
 
 if __name__ == "__main__":
     print(primeX(1))  # 2
